@@ -146,9 +146,9 @@ object MainForm: TMainForm
         Tag = 6
         Left = 25
         Top = 240
-        Width = 10
+        Width = 14
         Height = 23
-        Caption = '6'
+        Caption = '6 '
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clNavy
         Font.Height = -19
