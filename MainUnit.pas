@@ -160,6 +160,11 @@ begin
   for lcaption in Localizer.GetDictionaryOne do begin
     tLabelObj := Fabric.GetLabel(LeftGroupBox, fromTop, lcaption, i);
     i := i+1;
+
+    tLabelObj.OnClick := openTableEditor;
+    tLabelObj.OnMouseEnter := LinkMouseEnter;
+    tLabelObj.OnMouseLeave := LinkMouseLeave;
+
     fromTop := fromTop + tLabelObj.Height + 20;
   end;
   ManualLabels := [Left1Manual, Left2Manual, Left3Manual, Left4Manual, Left5Manual, Right1Manual, Right2Manual, Right3Manual];
