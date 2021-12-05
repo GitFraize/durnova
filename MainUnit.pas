@@ -11,24 +11,8 @@ type
     MainTabControl: TTabControl;
     LeftGroupBox: TGroupBox;
     RightGroupBox: TGroupBox;
-    Left1Link: TLabel;
-    Left2Link: TLabel;
-    Left3Link: TLabel;
-    Left4Link: TLabel;
-    Left5Link: TLabel;
-    Left6Link: TLabel;
-    Righ1Link: TLabel;
-    Right2Link: TLabel;
     LeftManuals: TGroupBox;
     RightManuals: TGroupBox;
-    Left1Manual: TLabel;
-    Left2Manual: TLabel;
-    Left3Manual: TLabel;
-    Left4Manual: TLabel;
-    Right1Manual: TLabel;
-    Right2Manual: TLabel;
-    Right3Manual: TLabel;
-    Left5Manual: TLabel;
     procedure ResizeFirstTab;
     procedure ResizeSecondTab;
     procedure FormResize(Sender: TObject);
@@ -38,7 +22,7 @@ type
     procedure LinkMouseEnter(Sender: TObject);
     procedure LinkMouseLeave(Sender: TObject);
     procedure FormActivate(Sender: TObject);
-    procedure Layout;
+    procedure LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer);
   private
     { Private declarations }
   public
@@ -49,22 +33,31 @@ var
   MainForm: TMainForm;
   Localizer: LocalizationClass;
   Fabric: TLabelsFabric;
-  MainLabels: TArray<TLabel>;
-  ManualLabels: TArray<TLabel>;
+  AllLabels: Array of TLabel;
 
 implementation
 
 {$R *.dfm}
 
-procedure TMainForm.Layout;
+procedure TMainForm.LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer);
 var
-  item: TLabel;
+  i, fromTop: integer;
+  lcaption: string;
+  tLabelObj: TLabel;
 begin
-  for item in MainLabels do begin
-    item.Width := self.clientWidth - 40;
-  end;
-  for item in ManualLabels do begin
-    item.Caption := Localizer.GetCaption(1, item.Tag-1)
+  fromTop := 20;
+  i := startWith;
+  for lcaption in Captions do begin
+    tLabelObj := Fabric.GetLabel(Group, fromTop, lcaption, i);
+    i := i+1;
+
+    tLabelObj.OnClick := openTableEditor;
+    tLabelObj.OnMouseEnter := LinkMouseEnter;
+    tLabelObj.OnMouseLeave := LinkMouseLeave;
+
+    fromTop := fromTop + tLabelObj.Height + 20;
+    SetLength(AllLabels, Length(AllLabels)+1);
+    AllLabels[Length(AllLabels)-1] := tLabelObj;
   end;
 end;
 
@@ -114,61 +107,43 @@ begin
 end;
 
 procedure TMainForm.ResizeFirstTab;
+var
+  tLabelObj: Tlabel;
 begin
   LeftGroupBox.Width := MainForm.ClientWidth div 2;
   LeftGroupBox.Height := MainForm.ClientHeight;
   RightGroupBox.Width := MainForm.ClientWidth div 2;
   RightGroupBox.Height := MainForm.ClientHeight;
   RightGroupBox.Left := LeftGroupBox.Width;
+  for tLabelObj in AllLabels do begin
+    tLabelObj.AutoSize := true;
+    tLabelObj.Width := Width div 2 - 30;
+    tLabelObj.Caption := tLabelObj.Caption;
+    tLabelObj.AutoSize :=false;
+    tLabelObj.Width := Width div 2 - 30;
+  end;
 end;
 
 procedure TMainForm.ResizeSecondTab;
 begin
   LeftManuals.Left := 0;
-  LeftManuals.Width := MainTabControl.Width div 2;
-  LeftManuals.Height := MainTabControl.Height;
-  Left1Manual.Width := LeftManuals.Width - 40;
-  Left4Manual.Width := LeftManuals.Width - 40;
-  RightManuals.Width := MainTabControl.Width div 2;
-  RightManuals.Height := MainTabControl.Height;
+  LeftManuals.Width := MainForm.Width div 2;
+  LeftManuals.Height := MainForm.Height;
+  RightManuals.Width := MainForm.Width div 2;
+  RightManuals.Height := MainForm.Height;
   RightManuals.Left := LeftManuals.Width;
 end;
 
-procedure Localize;
-var
-  item: TLabel;
-begin
-  for item in MainLabels do begin
-    item.Caption := Localizer.GetCaption(0, item.Tag-1)
-  end;
-  for item in ManualLabels do begin
-    item.Caption := Localizer.GetCaption(1, item.Tag-1)
-  end;
-
-end;
-
 procedure TMainForm.FormActivate(Sender: TObject);
-var
-  tLabelObj: TLabel;
-  fromTop, i: integer;
-  lcaption: string;
 begin
+  ResizeFirstTab;
+  ResizeSecondTab;
   Localizer := LocalizationClass.Create;
-  MainLabels := [];
-  fromTop := 40;
-  i := 1;
-  for lcaption in Localizer.GetDictionaryOne do begin
-    tLabelObj := Fabric.GetLabel(LeftGroupBox, fromTop, lcaption, i);
-    i := i+1;
 
-    tLabelObj.OnClick := openTableEditor;
-    tLabelObj.OnMouseEnter := LinkMouseEnter;
-    tLabelObj.OnMouseLeave := LinkMouseLeave;
-
-    fromTop := fromTop + tLabelObj.Height + 20;
-  end;
-  ManualLabels := [Left1Manual, Left2Manual, Left3Manual, Left4Manual, Left5Manual, Right1Manual, Right2Manual, Right3Manual];
-  Localize;
+  LayoutIn(Localizer.GetLeftTables, LeftGroupBox, 1);
+  LayoutIn(Localizer.GetRightTables, RightGroupBox, Length(Localizer.GetLeftTables)-1);
+  LayoutIn(Localizer.GetLeftManuals, LeftManuals, 1);
+  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetLeftManuals)-1);
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);

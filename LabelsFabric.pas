@@ -19,14 +19,18 @@ begin
   ownerAsControl := owner as TWinControl;
   Result := TLabel.Create(owner);
   Result.Parent := ownerAsControl;
-  Result.Caption := text;
+  Result.WordWrap := true;
   Result.Tag := tag;
-  Result.Width := ownerAsControl.Width - 40;
-  Result.Height := Ceil(Length(text)/((ownerAsControl.Width-40) / 20)) * 25;
   Result.Left := 25;
   Result.Top := fromTop;
   Result.Font.Color := clNavy;
   Result.Font.Size := 14;
+  Result.Font.Style := [fsUnderline];
+  Result.AutoSize := true;
+  Result.Width := ownerAsControl.Width - 30;
+  Result.Caption := text;
+  Result.AutoSize :=false;
+  Result.Width := ownerAsControl.Width - 30;
 end;
 
 end.
