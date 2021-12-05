@@ -12,7 +12,7 @@ object MainForm: TMainForm
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
-  OnActivate = FormActivate
+  OnCreate = FormCreate
   OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13

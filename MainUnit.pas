@@ -21,8 +21,8 @@ type
     procedure MainTabControlChange(Sender: TObject);
     procedure LinkMouseEnter(Sender: TObject);
     procedure LinkMouseLeave(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
     procedure LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,14 +48,14 @@ begin
   fromTop := 20;
   i := startWith;
   for lcaption in Captions do begin
-    tLabelObj := Fabric.GetLabel(Group, fromTop, lcaption, i);
+    tLabelObj := Fabric.GetLabel(Group, fromTop, '• '+lcaption, i);
     i := i+1;
 
     tLabelObj.OnClick := openTableEditor;
     tLabelObj.OnMouseEnter := LinkMouseEnter;
     tLabelObj.OnMouseLeave := LinkMouseLeave;
 
-    fromTop := fromTop + tLabelObj.Height + 20;
+    fromTop := fromTop + tLabelObj.Height+20;
     SetLength(AllLabels, Length(AllLabels)+1);
     AllLabels[Length(AllLabels)-1] := tLabelObj;
   end;
@@ -107,21 +107,12 @@ begin
 end;
 
 procedure TMainForm.ResizeFirstTab;
-var
-  tLabelObj: Tlabel;
 begin
   LeftGroupBox.Width := MainForm.ClientWidth div 2;
   LeftGroupBox.Height := MainForm.ClientHeight;
   RightGroupBox.Width := MainForm.ClientWidth div 2;
   RightGroupBox.Height := MainForm.ClientHeight;
   RightGroupBox.Left := LeftGroupBox.Width;
-  for tLabelObj in AllLabels do begin
-    tLabelObj.AutoSize := true;
-    tLabelObj.Width := Width div 2 - 30;
-    tLabelObj.Caption := tLabelObj.Caption;
-    tLabelObj.AutoSize :=false;
-    tLabelObj.Width := Width div 2 - 30;
-  end;
 end;
 
 procedure TMainForm.ResizeSecondTab;
@@ -134,7 +125,7 @@ begin
   RightManuals.Left := LeftManuals.Width;
 end;
 
-procedure TMainForm.FormActivate(Sender: TObject);
+procedure TMainForm.FormCreate(Sender: TObject);
 begin
   ResizeFirstTab;
   ResizeSecondTab;
@@ -147,11 +138,20 @@ begin
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
+var
+  tLabelObj: Tlabel;
 begin
   MainTabControl.Width := MainForm.ClientWidth;
   MainTabControl.Height := MainForm.ClientHeight;
   self.ResizeFirstTab;
   self.ResizeSecondTab;
+  for tLabelObj in AllLabels do begin
+    tLabelObj.AutoSize := true;
+    tLabelObj.Width := Width div 2 - 30;
+    tLabelObj.Caption := tLabelObj.Caption;
+    tLabelObj.AutoSize :=false;
+    tLabelObj.Width := Width div 2 - 30;
+  end;
 end;
 
 end.
