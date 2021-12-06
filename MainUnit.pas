@@ -135,9 +135,9 @@ begin
   Localizer := LocalizationClass.Create;
 
   LayoutIn(Localizer.GetLeftTables, LeftGroupBox, 1, true);
-  LayoutIn(Localizer.GetRightTables, RightGroupBox, Length(Localizer.GetLeftTables)-1, true);
+  LayoutIn(Localizer.GetRightTables, RightGroupBox, Length(Localizer.GetLeftTables)+1, true);
   LayoutIn(Localizer.GetLeftManuals, LeftManuals, 1, false);
-  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetLeftManuals)-1, false);
+  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetLeftManuals)+1, false);
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
