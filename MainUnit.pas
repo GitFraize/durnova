@@ -39,7 +39,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TMainForm.LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer);
+procedure TMainForm.LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer; isTables: boolean);
 var
   i, fromTop: integer;
   lcaption: string;
@@ -51,7 +51,10 @@ begin
     tLabelObj := Fabric.GetLabel(Group, fromTop, '• '+lcaption, i);
     i := i+1;
 
-    tLabelObj.OnClick := openTableEditor;
+    if isTables then
+      tLabelObj.OnClick := openTableEditor
+    else
+      tLabelObj.OnClick := openManual;
     tLabelObj.OnMouseEnter := LinkMouseEnter;
     tLabelObj.OnMouseLeave := LinkMouseLeave;
 
@@ -131,10 +134,10 @@ begin
   ResizeSecondTab;
   Localizer := LocalizationClass.Create;
 
-  LayoutIn(Localizer.GetLeftTables, LeftGroupBox, 1);
-  LayoutIn(Localizer.GetRightTables, RightGroupBox, Length(Localizer.GetLeftTables)-1);
-  LayoutIn(Localizer.GetLeftManuals, LeftManuals, 1);
-  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetLeftManuals)-1);
+  LayoutIn(Localizer.GetLeftTables, LeftGroupBox, 1, true);
+  LayoutIn(Localizer.GetRightTables, RightGroupBox, Length(Localizer.GetLeftTables)-1, true);
+  LayoutIn(Localizer.GetLeftManuals, LeftManuals, 1, false);
+  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetLeftManuals)-1, false);
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
