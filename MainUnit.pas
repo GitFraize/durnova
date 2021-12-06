@@ -21,7 +21,7 @@ type
     procedure MainTabControlChange(Sender: TObject);
     procedure LinkMouseEnter(Sender: TObject);
     procedure LinkMouseLeave(Sender: TObject);
-    procedure LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer);
+    procedure LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer; isTables: boolean);
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
