@@ -10,7 +10,6 @@ object TableEditorForm: TTableEditorForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   WindowState = wsMaximized
   OnClose = FormClose
   OnResize = FormResize
@@ -101,6 +100,7 @@ object TableEditorForm: TTableEditorForm
   end
   object DS: TDataSource
     DataSet = SearchQuery
+    OnDataChange = DataSourceChanged
     Left = 288
     Top = 96
   end

@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.984,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.534,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.390,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelsFabric.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.751,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.607,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\ProjectDB.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.127,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Localization.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.428,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.001,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.336,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.404,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.096,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.332,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.658,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.236,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.534,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.984,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.001,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.607,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\ProjectDB.dproj=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.918,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.428,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.332,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.390,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelsFabric.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.236,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.404,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.336,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.751,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.658,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.127,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Localization.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.096,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="MainUnit.pas"/>

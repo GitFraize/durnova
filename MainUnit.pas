@@ -1,4 +1,4 @@
-unit MainUnit;
+﻿unit MainUnit;
 
 interface
 
@@ -48,7 +48,7 @@ begin
   fromTop := 20;
   i := startWith;
   for lcaption in Captions do begin
-    tLabelObj := Fabric.GetLabel(Group, fromTop, '� '+lcaption, i);
+    tLabelObj := Fabric.GetLabel(Group, fromTop, '• '+lcaption, i);
     i := i+1;
 
     if isTables then
@@ -106,7 +106,7 @@ var
 begin
   tEditorForm := TTableEditorForm.Create(MainForm);
   tEditorForm.Show;
-  tEditorForm.openTable((Sender as TLabel).Tag)
+  tEditorForm.openTable((Sender as TLabel).Tag, Localizer.GetTableCaption((Sender as TLabel).Tag))
 end;
 
 procedure TMainForm.ResizeFirstTab;
