@@ -23,6 +23,7 @@ type
     procedure LinkMouseLeave(Sender: TObject);
     procedure LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer; isTables: boolean);
     procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -104,28 +105,33 @@ procedure TMainForm.openTableEditor(Sender: TObject);
 var
   tEditorForm: TTableEditorForm;
 begin
-  tEditorForm := TTableEditorForm.Create(MainForm);
+  tEditorForm := TTableEditorForm.Create(self);
   tEditorForm.Show;
   tEditorForm.openTable((Sender as TLabel).Tag, Localizer.GetTableCaption((Sender as TLabel).Tag))
 end;
 
 procedure TMainForm.ResizeFirstTab;
 begin
-  LeftGroupBox.Width := MainForm.ClientWidth div 2;
-  LeftGroupBox.Height := MainForm.ClientHeight;
-  RightGroupBox.Width := MainForm.ClientWidth div 2;
-  RightGroupBox.Height := MainForm.ClientHeight;
+  LeftGroupBox.Width := self.ClientWidth div 2;
+  LeftGroupBox.Height := self.ClientHeight;
+  RightGroupBox.Width := self.ClientWidth div 2;
+  RightGroupBox.Height := self.ClientHeight;
   RightGroupBox.Left := LeftGroupBox.Width;
 end;
 
 procedure TMainForm.ResizeSecondTab;
 begin
   LeftManuals.Left := 0;
-  LeftManuals.Width := MainForm.Width div 2;
-  LeftManuals.Height := MainForm.Height;
-  RightManuals.Width := MainForm.Width div 2;
-  RightManuals.Height := MainForm.Height;
+  LeftManuals.Width := self.Width div 2;
+  LeftManuals.Height := self.Height;
+  RightManuals.Width := self.Width div 2;
+  RightManuals.Height := self.Height;
   RightManuals.Left := LeftManuals.Width;
+end;
+
+procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  (Owner as TForm).Close()
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -144,8 +150,8 @@ procedure TMainForm.FormResize(Sender: TObject);
 var
   tLabelObj: Tlabel;
 begin
-  MainTabControl.Width := MainForm.ClientWidth;
-  MainTabControl.Height := MainForm.ClientHeight;
+  MainTabControl.Width := self.ClientWidth;
+  MainTabControl.Height := self.ClientHeight;
   self.ResizeFirstTab;
   self.ResizeSecondTab;
   for tLabelObj in AllLabels do begin

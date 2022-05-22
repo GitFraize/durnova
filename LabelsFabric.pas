@@ -29,7 +29,7 @@ begin
   Result.AutoSize := true;
   Result.Width := ownerAsControl.Width - 30;
   Result.Caption := text;
-  Result.AutoSize :=false;
+  Result.AutoSize := false;
   Result.Width := ownerAsControl.Width - 30;
 end;
 

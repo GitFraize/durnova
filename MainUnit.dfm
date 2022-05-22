@@ -11,12 +11,12 @@ object MainForm: TMainForm
   Font.Name = 'Tahoma'
   Font.Style = []
   WindowState = wsMaximized
+  OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object MainTabControl: TTabControl
-    Left = 0
+    Left = 8
     Top = 0
     Width = 809
     Height = 450
@@ -30,8 +30,8 @@ object MainForm: TMainForm
     ShowHint = False
     TabOrder = 0
     Tabs.Strings = (
-      #1044#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1100' '#1087#1086' '#1086#1090#1085#1086#1096#1077#1085#1080#1102' '#1082
-      #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082#1080)
+      #1041#1072#1085#1082' '#1076#1072#1085#1085#1099#1093
+      #1057#1087#1088#1072#1074#1086#1095#1085#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103)
     TabIndex = 0
     TabWidth = 250
     OnChange = MainTabControlChange
@@ -40,7 +40,7 @@ object MainForm: TMainForm
       Top = 40
       Width = 153
       Height = 385
-      Caption = #1053#1077#1089#1086#1074#1077#1088#1096#1077#1085#1085#1086#1083#1077#1090#1085#1080#1084
+      Caption = #1059#1095#1105#1090' '#1085#1077#1089#1086#1074#1077#1088#1096#1077#1085#1085#1086#1083#1077#1090#1085#1080#1093' '#1085#1072#1088#1091#1096#1080#1090#1077#1083#1077#1081
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -57,7 +57,7 @@ object MainForm: TMainForm
       Top = 40
       Width = 69
       Height = 385
-      Caption = 'C'#1077#1084#1100#1103#1084
+      Caption = #1059#1095#1105#1090' '#1085#1077#1073#1083#1072#1075#1086#1087#1086#1083#1091#1095#1085#1099#1093' '#1089#1077#1084#1077#1081
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -75,12 +75,15 @@ object MainForm: TMainForm
       Top = 40
       Width = 209
       Height = 385
-      Caption = #1053#1086#1088#1084#1072#1090#1080#1074#1085#1072#1103' '#1087#1088#1072#1074#1086#1074#1072#1103' '#1089#1080#1089#1090#1077#1084#1072
+      Caption = #1053#1086#1088#1084#1072#1090#1080#1074#1085#1086'-'#1087#1088#1072#1074#1086#1074#1099#1077' '#1072#1082#1090#1099
+      Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clMedGray
       Font.Height = -13
       Font.Name = 'Roboto'
       Font.Style = []
+      ParentBackground = False
+      ParentColor = False
       ParentFont = False
       TabOrder = 2
       Visible = False
@@ -91,7 +94,7 @@ object MainForm: TMainForm
       Top = 40
       Width = 360
       Height = 385
-      Caption = #1055#1088#1086#1087#1072#1075#1072#1085#1076#1072' '#1087#1088#1072#1074#1086#1074#1099#1093' '#1080' '#1087#1089#1080#1093#1086#1083#1086#1075#1086'-'#1087#1077#1076#1072#1075#1086#1075#1080#1095#1077#1089#1082#1080#1093' '#1079#1085#1072#1085#1080#1081
+      Caption = #1052#1077#1090#1086#1076#1080#1095#1077#1089#1082#1080#1077' '#1087#1086#1089#1086#1073#1080#1103
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clMedGray
       Font.Height = -13
