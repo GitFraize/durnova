@@ -16,6 +16,8 @@ type
     Label1: TLabel;
     DS: TDataSource;
     SearchQuery: TADOQuery;
+    PrintButton: TButton;
+    PrintDialog1: TPrintDialog;
     procedure ResizeGrid;
     procedure FormResize(Sender: TObject);
     procedure SearchButtonClick(Sender: TObject);
@@ -23,6 +25,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure DataSourceChanged(Sender: TObject; Field: TField);
     procedure SetTypeFor(Column: TColumn);
+    procedure PrintButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -95,6 +98,13 @@ begin
   ResizeGrid;
   Caption := localizedName + ' - число записей: ' + IntToStr(SearchQuery.RecordCount);
 end;
+
+procedure TTableEditorForm.PrintButtonClick(Sender: TObject);
+begin
+  { }
+  PrintDialog1.Execute();
+end;
+
 procedure TTableEditorForm.SearchButtonClick(Sender: TObject);
 begin
   if NOT(ColumnBox.Text = '') then begin

@@ -3,7 +3,7 @@ object TableEditorForm: TTableEditorForm
   Top = 0
   Caption = #1056#1077#1076#1072#1082#1090#1086#1088' '#1090#1072#1073#1083#1080#1094
   ClientHeight = 470
-  ClientWidth = 800
+  ClientWidth = 887
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,14 +15,14 @@ object TableEditorForm: TTableEditorForm
   OnResize = FormResize
   TextHeight = 13
   object Label1: TLabel
-    Left = 496
-    Top = 8
+    Left = 584
+    Top = 7
     Width = 48
     Height = 13
     Caption = #1087#1086#1080#1089#1082' '#1087#1086':'
   end
   object DBGrid1: TDBGrid
-    Left = 0
+    Left = -1
     Top = 35
     Width = 800
     Height = 415
@@ -46,8 +46,8 @@ object TableEditorForm: TTableEditorForm
     TabOrder = 1
   end
   object FindEdit: TEdit
-    Left = 255
-    Top = 5
+    Left = 343
+    Top = 4
     Width = 226
     Height = 25
     AutoSize = False
@@ -61,8 +61,8 @@ object TableEditorForm: TTableEditorForm
     OnChange = FindEditChange
   end
   object SearchButton: TButton
-    Left = 717
-    Top = 4
+    Left = 805
+    Top = 3
     Width = 75
     Height = 25
     Caption = #1087#1086#1080#1089#1082
@@ -76,8 +76,8 @@ object TableEditorForm: TTableEditorForm
     OnClick = SearchButtonClick
   end
   object ColumnBox: TComboBox
-    Left = 544
-    Top = 5
+    Left = 632
+    Top = 4
     Width = 167
     Height = 24
     AutoComplete = False
@@ -88,6 +88,15 @@ object TableEditorForm: TTableEditorForm
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+  end
+  object PrintButton: TButton
+    Left = 251
+    Top = 4
+    Width = 75
+    Height = 25
+    Caption = #1055#1077#1095#1072#1090#1100
+    TabOrder = 5
+    OnClick = PrintButtonClick
   end
   object DBConnection: TADOConnection
     ConnectionString = 
@@ -114,5 +123,9 @@ object TableEditorForm: TTableEditorForm
       'SELECT * FROM Table_3')
     Left = 248
     Top = 192
+  end
+  object PrintDialog1: TPrintDialog
+    Left = 768
+    Top = 448
   end
 end
