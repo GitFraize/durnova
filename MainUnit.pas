@@ -18,10 +18,12 @@ type
     procedure FormResize(Sender: TObject);
     procedure openTableEditor(Sender: TObject);
     procedure openManual(Sender: TObject);
+    procedure openUrl(Sender: TObject);
     procedure MainTabControlChange(Sender: TObject);
     procedure LinkMouseEnter(Sender: TObject);
     procedure LinkMouseLeave(Sender: TObject);
     procedure LayoutIn(Captions: TArray<String>; Group: TGroupBox; startWith: integer; isTables: boolean);
+    procedure AddLinks(ToGroup: TGroupBox);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -65,6 +67,26 @@ begin
   end;
 end;
 
+procedure TMainForm.AddLinks(ToGroup: TGroupBox);
+var i, fromTop: integer;
+  title: string;
+  labelObj: TLabel;
+begin
+  fromTop := 20;
+  for i := 0 to 6 do begin
+    title := Localizer.GetLinkTitle(i);
+    labelObj := Fabric.GetLabel(ToGroup, fromTop, '• '+title, i);
+
+    labelObj.OnClick := openUrl;
+    labelObj.OnMouseEnter := LinkMouseEnter;
+    labelObj.OnMouseLeave := LinkMouseLeave;
+
+    fromTop := fromTop + labelObj.Height+20;
+    SetLength(AllLabels, Length(AllLabels)+1);
+    AllLabels[Length(AllLabels)-1] := labelObj;
+  end;
+end;
+
 procedure TMainForm.LinkMouseEnter(Sender: TObject);
 begin
   Screen.Cursor := crHandPoint;
@@ -99,6 +121,17 @@ var
 begin
   Path := ExtractFilePath(Application.ExeName)+'manuals/manual_'+IntToStr((Sender as TLabel).Tag)+'.docx';
   ShellExecute(Application.Handle, nil, PChar(Path), nil, nil, SW_SHOWNORMAL)
+end;
+
+procedure TMainForm.openUrl(Sender: TObject);
+var
+  url: string;
+  index: integer;
+begin
+  index := (Sender as TLabel).Tag;
+  url := Localizer.GetLinkUrl(index);
+  url := StringReplace(URL, '"', '%22', [rfReplaceAll]);
+  ShellExecute(0, 'open', PChar(url), nil, nil, SW_SHOWNORMAL);
 end;
 
 procedure TMainForm.openTableEditor(Sender: TObject);
@@ -142,8 +175,8 @@ begin
 
   LayoutIn(Localizer.GetLeftTables, LeftGroupBox, 1, true);
   LayoutIn(Localizer.GetRightTables, RightGroupBox, Length(Localizer.GetLeftTables)+1, true);
-  LayoutIn(Localizer.GetLeftManuals, LeftManuals, 1, false);
-  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetLeftManuals)+1, false);
+  AddLinks(LeftManuals);
+  LayoutIn(Localizer.GetRightManuals, RightManuals, Length(Localizer.GetRightManuals)+1, false);
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);

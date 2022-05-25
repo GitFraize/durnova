@@ -13,7 +13,6 @@ object TableEditorForm: TTableEditorForm
   WindowState = wsMaximized
   OnClose = FormClose
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 496
@@ -28,6 +27,9 @@ object TableEditorForm: TTableEditorForm
     Width = 800
     Height = 415
     DataSource = DS
+    Options = [dgEditing, dgAlwaysShowEditor, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ParentShowHint = False
+    ShowHint = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
