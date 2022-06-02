@@ -1,31 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.984,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.607,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\ProjectDB.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.136,D:\OneDrive\Документы\GitHub\durnova\AuthScreen.pas=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.336,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.751,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.534,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.136,D:\OneDrive\Документы\GitHub\durnova\AuthScreen.dfm=D:\OneDrive\Документы\GitHub\durnova\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.056,D:\OneDrive\Документы\GitHub\durnova\AdminPanel.dfm=D:\OneDrive\Документы\GitHub\durnova\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.127,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Localization.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.313,D:\OneDrive\Документы\GitHub\durnova\Unit1.pas=D:\OneDrive\Документы\GitHub\durnova\ScreenScale.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.090,=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.077,D:\OneDrive\Документы\GitHub\durnova\ScreenScale.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.428,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.332,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.313,D:\OneDrive\Документы\GitHub\durnova\Unit1.pas=D:\OneDrive\Документы\GitHub\durnova\ScreenScale.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.404,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.136,D:\OneDrive\Документы\GitHub\durnova\AuthScreen.dfm=D:\OneDrive\Документы\GitHub\durnova\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.593,=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.136,D:\OneDrive\Документы\GitHub\durnova\AuthScreen.pas=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.501,D:\OneDrive\Документы\GitHub\durnova\AdminPanelUnit.pas=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.501,D:\OneDrive\Документы\GitHub\durnova\AdminPanelUnit.dfm=D:\OneDrive\Документы\GitHub\durnova\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.379,D:\OneDrive\Документы\GitHub\durnova\UsersPanelUnit.pas=D:\OneDrive\Документы\GitHub\durnova\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.607,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\ProjectDB.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.525,=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.446,=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.534,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelLink.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.236,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.001,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.332,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.415,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\TableEditor.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.687,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\MainUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.379,D:\OneDrive\Документы\GitHub\durnova\UsersPanelUnit.dfm=D:\OneDrive\Документы\GitHub\durnova\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.404,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\FileManager.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.390,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelsFabric.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.096,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\LabelAsLink.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.658,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.293,D:\OneDrive\Документы\GitHub\durnova\UserItemPanel.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.152,D:\OneDrive\Документы\GitHub\durnova\UserItemPanel.pas=D:\OneDrive\Документы\GitHub\durnova\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.126,D:\OneDrive\Документы\GitHub\durnova\AdminPanel.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.056,D:\OneDrive\Документы\GitHub\durnova\AdminPanel.pas=D:\OneDrive\Документы\GitHub\durnova\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.155,=D:\OneDrive\Документы\GitHub\durnova\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.336,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.751,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.096,=C:\Users\Stall\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.192,=D:\OneDrive\Документы\GitHub\durnova\Unit2.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="MainUnit.pas"/>
@@ -36,5 +49,8 @@
     <File Path="LabelsFabric.pas"/>
     <File Path="AuthScreen.pas"/>
     <File Path="AuthScreen.dfm"/>
+    <File Path="UserItemPanel.pas"/>
+    <File Path="AdminPanelUnit.pas"/>
+    <File Path="AdminPanelUnit.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

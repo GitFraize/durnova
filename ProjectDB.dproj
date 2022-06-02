@@ -114,6 +114,10 @@
             <Form>AuthorizationScreen</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="AdminPanelUnit.pas">
+            <Form>AdminPanel</Form>
+        </DCCReference>
+        <DCCReference Include="UserItemPanel.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
